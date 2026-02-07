@@ -87,7 +87,9 @@ function typeWriter() {
     setTimeout(typeWriter, 40);
   }
 }
-window.onload = typeWriter;
+window.onload = typeWriter;function(){
+  typeWriter();
+};
 
 function playMusic(){
   document.getElementById("music").play();
