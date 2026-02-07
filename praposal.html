@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>For Archita ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  margin:0;
+  padding:0;
+  font-family: Arial, sans-serif;
+  color:white;
+  text-align:center;
+  background: url('archita.jpg') no-repeat center center/cover;
+  overflow:hidden;
+}
+
+.overlay{
+  position:fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background:rgba(0,0,0,0.6);
+  z-index:0;
+}
+
+.content{
+  position:relative;
+  z-index:2;
+  padding-top:60px;
+}
+
+h1{
+  padding:20px;
+  font-size:24px;
+}
+
+button{
+  padding:12px 22px;
+  font-size:18px;
+  border:none;
+  border-radius:8px;
+  margin:10px;
+  cursor:pointer;
+}
+
+#yesBtn{ background:#ff4081; color:white; }
+#noBtn{ background:black; color:white; position:relative; }
+</style>
+</head>
+
+<body>
+
+<div class="overlay"></div>
+
+<div class="content">
+  <h1 id="text"></h1>
+
+  <button onclick="playMusic()">Play Music 🎵</button>
+
+  <div>
+    <button id="yesBtn" onclick="sayYes()">Yes 💖</button>
+    <button id="noBtn" onmouseover="moveNo()">No 😜</button>
+  </div>
+</div>
+
+<audio id="music" loop>
+  <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+var message = "Archita… Do you remember that day in the ice cream parlour? 🍨 The first time I properly proposed to you… From that moment, my heart started coding only your name. Will you be mine forever?";
+var i = 0;
+
+function typeWriter(){
+  if(i < message.length){
+    document.getElementById("text").innerHTML += message.charAt(i);
+    i++;
+    setTimeout(typeWriter,40);
+  }
+}
+window.onload = typeWriter;
+
+function playMusic(){
+  document.getElementById("music").play();
+}
+
+function moveNo(){
+  var btn = document.getElementById("noBtn");
+  btn.style.position="absolute";
+  btn.style.top=Math.random()*80+"%";
+  btn.style.left=Math.random()*80+"%";
+}
+
+function sayYes(){
+  document.body.innerHTML = `
+    <div style="background:black; height:100vh; color:white; text-align:center; padding-top:40px;">
+      <h1>Yayyy Archita ❤️</h1>
+      <h2>I Love You Forever 💋 — Sommm</h2>
+      <video width="320" controls autoplay>
+        <source src="kiss.mp4" type="video/mp4">
+      </video>
+    </div>
+  `;
+}
+</script>
+
+</body>
+</html>
