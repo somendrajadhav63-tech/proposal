@@ -67,9 +67,17 @@ button{
 <h1 id="text"></h1>
 <button onclick="love()">Click Here ❤️</button>
 
-<audio autoplay loop>
+<audio id="bgmusic" loop>
   <source src="song.mp3" type="audio/mpeg">
 </audio>
+
+<button onclick="playMusic()">Play Music 🎵</button>
+
+<script>
+function playMusic(){
+  document.getElementById("bgmusic").play();
+}
+</script>
 
 <script>
 var message = "Archita... Do you remember that day in the ice cream parlour? 🍨 The first time I gathered courage to properly propose to you... My hands were cold, my heart was racing, but my eyes searched only for your smile. From that moment, my heart started coding only your name. And till today, every beat asks... Will you be mine forever?";
