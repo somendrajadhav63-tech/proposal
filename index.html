@@ -64,8 +64,11 @@ button{
 
 <div class="overlay"></div>
 
-<h1 id="text"></h1>
-<button onclick="love()">Click Here ❤️</button>
+<div id="kiss" style="display:none; margin-top:30px;">
+  <video id="loveVideo" width="280" controls>
+    <source src="kiss.mp4" type="video/mp4">
+  </video>
+</div>
 
 <audio id="music" loop>
   <source src="song.mp3" type="audio/mpeg">
@@ -112,6 +115,18 @@ setInterval(function(){
     heart.remove();
   },6000);
 },500);
+function sayYes() {
+    document.body.innerHTML = `
+        <div style="text-align:center; padding-top:40px;">
+            <h1 style="color:white;">Yayyy Archita ❤️</h1>
+            <h2>I love you forever 💋 — Sommm</h2>
+
+            <video width="300" controls autoplay>
+                <source src="kiss.mp4" type="video/mp4">
+            </video>
+        </div>
+    `;
+}
 </script>
 
 </body>
