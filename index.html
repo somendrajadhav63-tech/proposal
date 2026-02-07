@@ -127,6 +127,23 @@ function sayYes() {
         </div>
     `;
 }
+function moveNo(btn){
+  btn.style.position = "absolute";
+  btn.style.top = Math.random()*80 + "%";
+  btn.style.left = Math.random()*80 + "%";
+}
+
+function sayYes(){
+  document.body.innerHTML = `
+    <div style="text-align:center; padding-top:40px; color:white;">
+      <h1>Yayyy Archita ❤️</h1>
+      <h2>I love you forever 💋 — Sommm</h2>
+      <video width="300" controls autoplay>
+        <source src="kiss.mp4" type="video/mp4">
+      </video>
+    </div>
+  `;
+}
 </script>
 
 </body>
