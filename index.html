@@ -67,16 +67,18 @@ button{
 <h1 id="text"></h1>
 <button onclick="love()">Click Here ❤️</button>
 
-<audio id="bgmusic" loop>
+<audio id="music" loop>
   <source src="song.mp3" type="audio/mpeg">
 </audio>
 
 <button onclick="playMusic()">Play Music 🎵</button>
 
 <script>
-function playMusic(){
-  document.getElementById("bgmusic").play();
+function playMusic() {
+  var m = document.getElementById("music");
+  m.play();
 }
+</script>
 </script>
 
 <script>
